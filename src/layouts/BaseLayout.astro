@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+const { title = 'Cláudio Tavares — Desenvolvimento + TI', description = 'Portefólio bilingue de desenvolvimento, sistemas e TI.', lang = 'pt', path = '/' } = Astro.props;
+const alternate = lang === 'pt' ? `/en${path === '/' ? '/' : path}` : path.replace(/^\/en/, '') || '/';
+---
+<!doctype html>
+<html lang={lang === 'pt' ? 'pt-CV' : 'en'} data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://claudiojgtavares.github.io${Astro.url.pathname}`} />
+    <meta property="og:image" content="https://claudiojgtavares.github.io/images/pong-preview.png" />
+    <link rel="canonical" href={`https://claudiojgtavares.github.io${Astro.url.pathname}`} />
+    <link rel="alternate" hreflang={lang === 'pt' ? 'en' : 'pt'} href={`https://claudiojgtavares.github.io${alternate}`} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Person', name: 'Cláudio Tavares', url: 'https://claudiojgtavares.github.io', sameAs: ['https://github.com/claudiojgtavares', 'https://www.linkedin.com/in/claudiojgtavares/'], knowsAbout: ['Kotlin', 'PHP', 'Python', 'JavaScript', 'Linux', 'Cloud'] })} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={lang === 'pt' ? '/' : '/en/'} aria-label="Cláudio Tavares home"><span class="brand-mark">CT</span><span>Cláudio Tavares</span></a>
+      <nav aria-label={lang === 'pt' ? 'Navegação principal' : 'Primary navigation'}>
+        <a href={lang === 'pt' ? '/#projetos' : '/en/#projects'}>{lang === 'pt' ? 'Projetos' : 'Projects'}</a>
+        <a href={lang === 'pt' ? '/#percurso' : '/en/#journey'}>{lang === 'pt' ? 'Percurso' : 'Journey'}</a>
+        <a href={lang === 'pt' ? '/#contacto' : '/en/#contact'}>{lang === 'pt' ? 'Contacto' : 'Contact'}</a>
+      </nav>
+      <div class="header-actions"><a class="lang-switch" href={alternate}>{lang === 'pt' ? 'EN' : 'PT'}</a><button class="theme-toggle" type="button" aria-label={lang === 'pt' ? 'Alternar tema' : 'Toggle theme'}>◐</button></div>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer"><span>© {new Date().getFullYear()} Cláudio Tavares</span><span>Cabo Verde · Atlantic systems</span><span><a href="https://github.com/claudiojgtavares">GitHub</a> · <a href="https://www.linkedin.com/in/claudiojgtavares/">LinkedIn</a></span></footer>
+    <script is:inline>
+      const root = document.documentElement;
+      const stored = localStorage.getItem('theme');
+      if (stored) root.dataset.theme = stored;
+      document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+        const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+        root.dataset.theme = next; localStorage.setItem('theme', next);
+      });
+    </script>
+  </body>
+</html>
