@@ -16,8 +16,8 @@ npm run build
 npm run preview
 ```
 
-O site documenta seis repositórios selecionados e distingue claramente trabalho profissional, formação, protótipos académicos e tecnologias em aprendizagem. A página do Portal Académico explica que PHP/MySQL precisa de servidor e não promete uma demo falsa no GitHub Pages.
+O site documenta cinco repositórios selecionados e distingue claramente trabalho profissional, formação, protótipos académicos e tecnologias em aprendizagem. A página do Portal Académico explica que PHP/MySQL precisa de servidor e não promete uma demo falsa no GitHub Pages.
 
 ## English
 
-Bilingual static portfolio built with Astro + TypeScript and deployed to GitHub Pages through the official custom workflow. It presents six selected projects, project detail pages, filtering, responsive styling, dark/light theme, SEO metadata, sitemap, structured data and an accessible 404 page.
+Bilingual static portfolio built with Astro + TypeScript and deployed to GitHub Pages through the official custom workflow. It presents five selected projects, project detail pages, filtering, responsive styling, dark/light theme, SEO metadata, sitemap, structured data and an accessible 404 page.

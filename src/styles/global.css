@@ -42,16 +42,6 @@ h1{line-height:1.06}
 .contact-section{padding-top:clamp(64px,8vw,120px)}
 .contact-panel h2{line-height:1.06}
 
-.journey-timeline{margin-top:clamp(52px,7vw,96px)}
-.timeline-heading .eyebrow{margin-bottom:22px}
-.timeline-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
-.timeline-item{min-height:190px;padding:21px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
-.timeline-item .journey-number{margin-bottom:32px}
-.timeline-item h3{margin:0 0 10px;font-size:1.05rem;line-height:1.2}
-.timeline-item p{margin:0;color:var(--muted);font-size:.76rem;line-height:1.55}
-@media(max-width:960px){.timeline-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:720px){.timeline-list{grid-template-columns:1fr}.timeline-item{min-height:auto}.timeline-item .journey-number{margin-bottom:22px}}
-
 /* Keep every project preview on one rhythm and show the complete ACTA capture. */
 .project-visual,.project-card:not(.featured) .project-visual{aspect-ratio:16/9}
 .project-visual.media-phone,.project-visual.media-gallery{height:auto}
