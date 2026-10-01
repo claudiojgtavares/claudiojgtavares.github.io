@@ -33,3 +33,11 @@
 .detail-gallery-image{width:100%;height:500px;object-fit:contain;object-position:top center;border:1px solid rgba(7,18,31,.12);border-radius:9px;background:#f5f6f4;box-shadow:0 8px 24px rgba(17,35,42,.08)}
 
 @media(max-width:720px){.project-link{min-width:0}.project-visual.media-phone{height:390px;aspect-ratio:auto}.project-visual.media-phone img{width:min(330px,calc(100% - 38px));height:auto;max-height:none}.project-visual.media-gallery{height:300px;padding:9px;gap:7px;aspect-ratio:auto}.detail-media{position:static;min-height:390px}.detail-media .detail-image{min-height:390px}.detail-media.media-phone .detail-image{height:350px;min-height:0}.detail-media.media-gallery{gap:7px;padding:9px}.detail-gallery-image{height:370px}}
+
+/* Demo Day typography guardrails: keep section labels clear of large headings. */
+h1{line-height:1.06}
+.section-heading .eyebrow{margin-bottom:clamp(16px,2vw,24px)}
+.section-heading h2{line-height:1.06}
+.journey-section{padding-top:clamp(64px,8vw,120px)}
+.contact-section{padding-top:clamp(64px,8vw,120px)}
+.contact-panel h2{line-height:1.06}
