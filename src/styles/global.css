@@ -41,3 +41,8 @@ h1{line-height:1.06}
 .journey-section{padding-top:clamp(64px,8vw,120px)}
 .contact-section{padding-top:clamp(64px,8vw,120px)}
 .contact-panel h2{line-height:1.06}
+
+/* Keep every project preview on one rhythm and show the complete ACTA capture. */
+.project-visual,.project-card:not(.featured) .project-visual{aspect-ratio:16/9}
+.project-visual.media-phone,.project-visual.media-gallery{height:auto}
+.project-visual.media-phone img{align-self:center;width:auto;height:calc(100% - 36px);max-width:calc(100% - 48px);margin:18px 0}

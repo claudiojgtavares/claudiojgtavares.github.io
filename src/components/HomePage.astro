@@ -34,7 +34,7 @@ const categoryMap: Record<string, string> = { 'Dados': 'Data', 'Sistemas': 'Syst
       <div class:list={['project-visual', `media-${project.media ?? 'cover'}`]}>
         {project.gallery
           ? project.gallery.map((item) => <img class="project-gallery-image" src={item.src} alt={isPt ? item.alt.pt : item.alt.en} loading="lazy" decoding="async" fetchpriority="low" />)
-          : <img src={project.image} alt={isPt ? `Imagem do projeto ${project.title}` : `${project.title} project preview`} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />}
+          : <img src={project.image} alt={isPt ? (project.imageAlt?.pt ?? `Imagem do projeto ${project.title}`) : (project.imageAlt?.en ?? `${project.title} project preview`)} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />}
         <span class="project-index">0{index + 1}</span><span class="project-open" aria-hidden="true">↗</span>
       </div>
       <div class="project-card-body"><div class="project-card-label"><span class="kicker">{eyebrow}</span><span class="project-line" style={`--project-accent:${project.accent}`}></span></div><h3>{project.title}</h3><p>{data.summary}</p><div class="tags">{tags.map((tag) => <span class="tag">{tag}</span>)}</div><span class="project-read">{isPt ? 'Abrir projeto' : 'Open project'} <span aria-hidden="true">→</span></span></div>
