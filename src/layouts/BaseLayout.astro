@@ -3,6 +3,8 @@ import '../styles/global.css';
 const { title = 'Cláudio Tavares — Desenvolvimento + TI', description = 'Portefólio bilingue de desenvolvimento, sistemas e TI.', lang = 'pt', path = '/' } = Astro.props;
 const alternate = lang === 'pt' ? `/en${path === '/' ? '/' : path}` : path.replace(/^\/en/, '') || '/';
 const isPt = lang === 'pt';
+const ogImage = 'https://claudiojgtavares.github.io/images/og-card.png';
+const ogImageAlt = 'Cláudio Tavares — Desenvolvimento + TI, Cabo Verde';
 ---
 <!doctype html>
 <html lang={isPt ? 'pt-CV' : 'en'} data-theme="dark">
@@ -16,9 +18,11 @@ const isPt = lang === 'pt';
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://claudiojgtavares.github.io${Astro.url.pathname}`} />
-    <meta property="og:image" content="https://claudiojgtavares.github.io/images/profile.webp" />
-    <meta property="og:image:alt" content={isPt ? 'Fotografia de perfil de Cláudio Tavares' : 'Profile photograph of Cláudio Tavares'} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
     <link rel="canonical" href={`https://claudiojgtavares.github.io${Astro.url.pathname}`} />
     <link rel="alternate" hreflang={isPt ? 'en' : 'pt'} href={`https://claudiojgtavares.github.io${alternate}`} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
