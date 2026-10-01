@@ -55,4 +55,5 @@ h1{line-height:1.06}
 /* Keep every project preview on one rhythm and show the complete ACTA capture. */
 .project-visual,.project-card:not(.featured) .project-visual{aspect-ratio:16/9}
 .project-visual.media-phone,.project-visual.media-gallery{height:auto}
-.project-visual.media-phone img{align-self:center;width:auto;height:calc(100% - 36px);max-width:calc(100% - 48px);margin:18px 0}
+.project-visual.media-phone{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);min-height:0;padding:18px}
+.project-visual.media-phone img{align-self:center;width:100%;height:100%;max-width:100%;max-height:100%;margin:0;object-fit:contain;object-position:center;border-radius:10px;box-shadow:none}
