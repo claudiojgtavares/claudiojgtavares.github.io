@@ -17,6 +17,8 @@ const isPt = lang === 'pt';
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://claudiojgtavares.github.io${Astro.url.pathname}`} />
     <meta property="og:image" content="https://claudiojgtavares.github.io/images/profile.webp" />
+    <meta property="og:image:alt" content={isPt ? 'Fotografia de perfil de Cláudio Tavares' : 'Profile photograph of Cláudio Tavares'} />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={`https://claudiojgtavares.github.io${Astro.url.pathname}`} />
     <link rel="alternate" hreflang={isPt ? 'en' : 'pt'} href={`https://claudiojgtavares.github.io${alternate}`} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
