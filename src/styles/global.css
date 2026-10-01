@@ -22,6 +22,11 @@
 .project-visual.media-gallery .project-gallery-image{align-self:stretch;min-width:0;min-height:0;width:100%;height:100%;max-height:100%;object-fit:contain;object-position:top center;filter:none;border:1px solid color-mix(in srgb,var(--bg) 12%,transparent);border-radius:9px;background:var(--media-card);box-shadow:0 8px 24px var(--shadow-color)}
 .project-card:hover .project-visual.media-gallery .project-gallery-image{transform:none;filter:none}
 .project-visual.media-gallery .project-open{padding:4px 7px;border-radius:6px;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(8px)}
+.project-visual.media-terminal img{object-position:50% 42%;transform:scale(1.55);filter:none}
+.project-card:hover .project-visual.media-terminal img{transform:scale(1.62);filter:none}
+.project-visual.media-game img{object-position:center top}
+.home-hero{isolation:isolate}
+.hero-intro{position:relative;z-index:1}
 
 .back-link{display:inline-flex;margin-bottom:28px;color:var(--muted);font:500 .7rem var(--mono);transition:color .2s ease,transform .2s var(--ease)}
 .back-link:hover{color:var(--accent);transform:translateX(-3px)}
@@ -44,10 +49,10 @@ h1{line-height:1.06}
 
 /* Keep every project preview on one rhythm and show the complete ACTA capture. */
 .project-visual,.project-card:not(.featured) .project-visual{aspect-ratio:16/9}
-.project-visual.media-phone{height:auto;aspect-ratio:16/9;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);min-height:0;padding:18px}
-.project-visual.media-phone img{position:absolute;inset:18px 0;align-self:auto;justify-self:center;width:auto;height:calc(100% - 36px);max-width:calc(100% - 36px);max-height:100%;margin:0;object-fit:contain;object-position:center;border-radius:10px;box-shadow:none}
+.project-visual.media-phone{height:clamp(330px,34vw,480px);aspect-ratio:auto;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);min-height:0;padding:14px}
+.project-visual.media-phone img{position:absolute;inset:14px 0;align-self:auto;justify-self:center;width:auto;height:calc(100% - 28px);max-width:calc(100% - 28px);max-height:100%;margin:0;object-fit:contain;object-position:center;border-radius:10px;box-shadow:none}
 .project-visual.media-gallery{height:clamp(300px,30vw,430px);aspect-ratio:auto}
-@media(max-width:720px){.project-visual.media-phone{height:auto;aspect-ratio:16/9}.project-visual.media-phone img{inset:12px 0;height:calc(100% - 24px);max-width:calc(100% - 24px)}.project-visual.media-gallery{height:300px}}
+@media(max-width:720px){.project-visual.media-phone{height:clamp(320px,92vw,410px);aspect-ratio:auto}.project-visual.media-phone img{inset:12px 0;height:calc(100% - 24px);max-width:calc(100% - 24px)}.project-visual.media-gallery{height:300px}}
 
 /* Contact surface: direct email, social links and a mailto form for static hosting. */
 .contact-panel.contact-panel-enhanced{display:grid;grid-template-columns:minmax(0,.88fr) minmax(360px,1.12fr);align-items:stretch;gap:clamp(32px,6vw,92px);padding:56px 0 62px}

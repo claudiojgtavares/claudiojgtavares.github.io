@@ -7,7 +7,7 @@ export type Project = {
   tags: { pt: string[]; en: string[] };
   image: string;
   imageAlt?: { pt: string; en: string };
-  media?: 'cover' | 'phone' | 'gallery';
+  media?: 'cover' | 'phone' | 'gallery' | 'terminal' | 'game';
   gallery?: { src: string; alt: { pt: string; en: string } }[];
   repo: string;
   demo?: string;
@@ -41,13 +41,13 @@ export const projects: Project[] = [
   },
   {
     slug: 'linux-seguranca-cloud', title: 'Linux, Segurança e Cloud', eyebrow: { pt: 'Sistemas · Laboratório em evolução', en: 'Systems · Evolving lab' }, category: 'Sistemas', filters: ['Systems'],
-    tags: { pt: ['Sistemas', 'Segurança'], en: ['Systems', 'Security'] }, image: '/images/linux-terminal.png', imageAlt: { pt: 'Terminal Linux com evidência do laboratório de segurança e cloud', en: 'Linux terminal evidence from the security and cloud lab' }, repo: 'https://github.com/claudiojgtavares/linux-seguranca-cloud', accent: '#3B82F6',
+    tags: { pt: ['Sistemas', 'Segurança'], en: ['Systems', 'Security'] }, image: '/images/linux-terminal.png', imageAlt: { pt: 'Terminal Linux com evidência do laboratório de segurança e cloud', en: 'Linux terminal evidence from the security and cloud lab' }, media: 'terminal', repo: 'https://github.com/claudiojgtavares/linux-seguranca-cloud', accent: '#3B82F6',
     pt: { summary: 'Laboratório documentado de Ubuntu Server, permissões, SSH, VM, VPS e cloud.', problem: 'Consolidar fundamentos operacionais em exercícios pequenos, verificáveis e sem expor dados reais.', solution: 'Notas, diagramas e evidências sanitizadas de uma VM local, com princípio do menor privilégio.', validation: 'Registo de aprendizagem prática; SSH remoto e cloud real ficam como próximos passos, não como experiência profissional alegada.', stack: ['Linux', 'Ubuntu Server', 'SSH', 'VMware', 'Segurança'] },
     en: { summary: 'Documented lab for Ubuntu Server, permissions, SSH, VMs, VPS and cloud concepts.', problem: 'Consolidate operational fundamentals through small, verifiable exercises without exposing real data.', solution: 'Notes, diagrams and sanitized evidence from a local VM with least-privilege thinking.', validation: 'A learning record; real remote SSH and cloud deployment remain future steps, not claimed professional experience.', stack: ['Linux', 'Ubuntu Server', 'SSH', 'VMware', 'Security'] }
   },
   {
     slug: 'pong-oop-p5js', title: 'Pong OOP', eyebrow: { pt: 'JavaScript · Offline', en: 'JavaScript · Offline' }, category: 'Web', filters: ['Web'],
-    tags: { pt: ['Web', 'Offline'], en: ['Web', 'Offline'] }, image: '/images/pong-preview.png', imageAlt: { pt: 'Pong OOP jogável no navegador', en: 'Playable Pong OOP game in the browser' }, repo: 'https://github.com/claudiojgtavares/pong-oop-p5js', demo: 'https://claudiojgtavares.github.io/pong-oop-p5js/', accent: '#3B82F6',
+    tags: { pt: ['Web', 'Offline'], en: ['Web', 'Offline'] }, image: '/images/pong-preview.png', imageAlt: { pt: 'Pong OOP jogável no navegador', en: 'Playable Pong OOP game in the browser' }, media: 'game', repo: 'https://github.com/claudiojgtavares/pong-oop-p5js', demo: 'https://claudiojgtavares.github.io/pong-oop-p5js/', accent: '#3B82F6',
     pt: { summary: 'PONG jogável, offline e orientado a objetos, com testes Node/browser.', problem: 'Criar um jogo pequeno que seja simultaneamente divertido de demonstrar e claro para estudar.', solution: 'Classes Campo, Raquete, Bola, Pontuacao, Som e Jogo com p5.js local, sem CDN e sem servidor.', validation: '34 testes Node, sintaxe e execução direta validados anteriormente; vitória fixa aos 7 pontos.', stack: ['JavaScript', 'p5.js local', 'OOP', 'Node.js', 'Web Audio'] },
     en: { summary: 'Playable offline object-oriented PONG with Node/browser tests.', problem: 'Build a small game that is both fun to demo and straightforward to study.', solution: 'Campo, Raquete, Bola, Pontuacao, Som and Jogo classes with a local p5.js copy and no server.', validation: '34 Node tests, syntax and direct-file execution were previously validated; the win target is fixed at 7 points.', stack: ['JavaScript', 'Local p5.js', 'OOP', 'Node.js', 'Web Audio'] }
   }
