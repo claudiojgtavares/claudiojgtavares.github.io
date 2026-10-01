@@ -91,4 +91,9 @@ h1{line-height:1.06}
 .contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--muted)}
 .contact-form input:focus,.contact-form textarea:focus{border-color:var(--accent);outline:0;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}
 .contact-submit{justify-self:start;margin-top:10px}
+.honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.form-status{min-height:1.5em;margin:2px 0 0;color:var(--muted);font-size:.78rem;line-height:1.45}
+.form-status[data-state='success']{color:var(--accent-light)}
+.form-status[data-state='error']{color:var(--coral)}
+.contact-submit:disabled{cursor:wait;opacity:.7;transform:none}
 @media(max-width:720px){.contact-panel.contact-panel-enhanced{grid-template-columns:1fr;gap:32px;padding:42px 0 48px}.contact-form{padding:22px}.contact-submit{width:100%}}
