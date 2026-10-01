@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { projects, projectBySlug } from '../../data/projects';
+import { projects } from '../../data/projects';
 export function getStaticPaths() { return projects.map((project) => ({ params: { slug: project.slug }, props: { project } })); }
 const { project } = Astro.props;
 const data = project.pt;
 ---
 <BaseLayout title={`${project.title} — Cláudio Tavares`} description={data.summary} lang="pt" path={`/projects/${project.slug}`}>
-  <section class="detail-hero"><span class="kicker">{project.eyebrow}</span><h1>{project.title}</h1><p class="lede">{data.summary}</p><div class="hero-actions"><a class="button" href={project.repo}>Código no GitHub ↗</a>{project.demo && <a class="button secondary" href={project.demo}>Demo jogável ↗</a>}</div></section>
-  <section class="detail-grid"><div><img class="detail-image" src={project.image} alt={`Imagem do projeto ${project.title}`} /></div><div class="detail-copy"><article class="info-card"><h2>Problema</h2><p>{data.problem}</p></article><article class="info-card"><h2>Solução</h2><p>{data.solution}</p></article><article class="info-card"><h2>Validação</h2><p>{data.validation}</p></article><article class="info-card"><h2>Tecnologias</h2><div class="stack-list">{data.stack.map((tech) => <span>{tech}</span>)}</div></article></div></section>
+  <section class="detail-hero"><a class="back-link" href="/#projetos">← Voltar aos projetos</a><span class="kicker">{project.eyebrow.pt}</span><h1>{project.title}</h1><p class="lede">{data.summary}</p><div class="hero-actions"><a class="button button-primary" href={project.repo}>Código no GitHub ↗</a>{project.demo && <a class="button button-ghost" href={project.demo}>Demo jogável ↗</a>}</div></section>
+  <section class="detail-grid"><div class:list={['detail-media', `media-${project.media ?? 'cover'}`]}>{project.gallery ? project.gallery.map((item) => <img class="detail-gallery-image" src={item.src} alt={item.alt.pt} loading="lazy" decoding="async" />) : <img class="detail-image" src={project.image} alt={`Imagem do projeto ${project.title}`} />}</div><div class="detail-copy"><article class="info-card"><h2>Problema</h2><p>{data.problem}</p></article><article class="info-card"><h2>Solução</h2><p>{data.solution}</p></article><article class="info-card"><h2>Validação</h2><p>{data.validation}</p></article><article class="info-card"><h2>Tecnologias</h2><div class="stack-list">{data.stack.map((tech) => <span>{tech}</span>)}</div></article></div></section>
 </BaseLayout>
