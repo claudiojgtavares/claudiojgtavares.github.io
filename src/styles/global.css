@@ -59,6 +59,7 @@ h1{line-height:1.06}
 .section-heading .eyebrow{margin-bottom:clamp(16px,2vw,24px)}
 .section-heading h2{line-height:1.06}
 .journey-section{padding-top:clamp(64px,8vw,120px)}
+.about-copy{max-width:65ch;margin:0;color:var(--muted);line-height:1.8}
 .contact-section{padding-top:clamp(64px,8vw,120px)}
 .contact-panel h2{line-height:1.06}
 
