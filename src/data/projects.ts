@@ -18,12 +18,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: 'acta', title: 'ACTA', eyebrow: { pt: 'Mobile · Produto em evolução', en: 'Mobile · Product in progress' }, category: 'Mobile', filters: ['Mobile'],
-    tags: { pt: ['Mobile', 'IA aplicada'], en: ['Mobile', 'Applied AI'] }, image: '/images/acta-installed.jpeg', imageAlt: { pt: 'Captura da aplicação ACTA instalada num dispositivo Android', en: 'Installed ACTA app running on an Android device' }, media: 'phone', repo: 'https://github.com/claudiojgtavares/acta-android', accent: '#3B82F6',
-    pt: { summary: 'Reuniões com consentimento, áudio, revisão de transcrição e proposta de ata.', problem: 'Transformar uma reunião gravada num registo verificável sem perder consentimento, contexto ou histórico de versões.', solution: 'App Android offline-first em Kotlin/Compose, Room e regras de negócio centralizadas no repositório; Gemini fica opcional.', validation: 'Testes unitários cobrem consentimento, revisão e versionamento. Build/instalação dependem do ambiente Android disponível.', stack: ['Kotlin', 'Jetpack Compose', 'Room', 'Audio', 'Gemini opcional'] },
-    en: { summary: 'Meetings with consent, audio, transcript review and structured minutes.', problem: 'Turn a recorded meeting into a traceable record without losing consent, context or version history.', solution: 'Offline-first Kotlin/Compose Android app with Room and repository-owned business rules; Gemini remains optional.', validation: 'Unit tests cover consent, review and versioning. Build and device installation depend on the target Android environment.', stack: ['Kotlin', 'Jetpack Compose', 'Room', 'Audio', 'Optional Gemini'] }
-  },
-  {
     slug: 'portal-academico', title: 'Portal Académico', eyebrow: { pt: 'Web · Protótipo académico', en: 'Web · Academic prototype' }, category: 'Web', filters: ['Web', 'Academic project'],
     tags: { pt: ['Web', 'Projeto académico'], en: ['Web', 'Academic project'] }, image: '/images/portal-candidatura.webp', media: 'gallery',
     gallery: [
@@ -32,6 +26,12 @@ export const projects: Project[] = [
     ], repo: 'https://github.com/claudiojgtavares/portal-academico-php', accent: '#3B82F6',
     pt: { summary: 'Fluxos académicos com candidaturas, sete perfis, notas, documentos e relatórios.', problem: 'Organizar processos de uma secretaria académica num protótipo demonstrável e com separação clara de permissões.', solution: 'PHP/MySQL com PDO, dashboards por perfil, seed fictício, CSRF, cookies seguros e validação de uploads.', validation: '95 ficheiros PHP passam lint local. A aplicação é para XAMPP/local; GitHub Pages não executa PHP/MySQL.', stack: ['PHP 8.1+', 'MySQL', 'PDO', 'XAMPP', 'PHPUnit'] },
     en: { summary: 'Academic workflows with applications, seven roles, grades, documents and reports.', problem: 'Organise registrar workflows in a demonstrable prototype with clear permission boundaries.', solution: 'PHP/MySQL with PDO, role dashboards, fictional seed data, CSRF, secure cookies and upload validation.', validation: '95 PHP files pass local syntax lint. The app targets XAMPP/local hosting; GitHub Pages cannot execute PHP/MySQL.', stack: ['PHP 8.1+', 'MySQL', 'PDO', 'XAMPP', 'PHPUnit'] }
+  },
+  {
+    slug: 'acta', title: 'ACTA', eyebrow: { pt: 'Mobile · Produto em evolução', en: 'Mobile · Product in progress' }, category: 'Mobile', filters: ['Mobile'],
+    tags: { pt: ['Mobile', 'IA aplicada'], en: ['Mobile', 'Applied AI'] }, image: '/images/acta-installed.jpeg', imageAlt: { pt: 'Captura da aplicação ACTA instalada num dispositivo Android', en: 'Installed ACTA app running on an Android device' }, media: 'phone', repo: 'https://github.com/claudiojgtavares/acta-android', accent: '#3B82F6',
+    pt: { summary: 'Reuniões com consentimento, áudio, revisão de transcrição e proposta de ata.', problem: 'Transformar uma reunião gravada num registo verificável sem perder consentimento, contexto ou histórico de versões.', solution: 'App Android offline-first em Kotlin/Compose, Room e regras de negócio centralizadas no repositório; Gemini fica opcional.', validation: 'Testes unitários cobrem consentimento, revisão e versionamento. Build/instalação dependem do ambiente Android disponível.', stack: ['Kotlin', 'Jetpack Compose', 'Room', 'Audio', 'Gemini opcional'] },
+    en: { summary: 'Meetings with consent, audio, transcript review and structured minutes.', problem: 'Turn a recorded meeting into a traceable record without losing consent, context or version history.', solution: 'Offline-first Kotlin/Compose Android app with Room and repository-owned business rules; Gemini remains optional.', validation: 'Unit tests cover consent, review and versioning. Build and device installation depend on the target Android environment.', stack: ['Kotlin', 'Jetpack Compose', 'Room', 'Audio', 'Optional Gemini'] }
   },
   {
     slug: 'totoloto-analyzer', title: 'Totoloto Analyzer', eyebrow: { pt: 'Dados · Método explícito', en: 'Data · Explicit method' }, category: 'Dados', filters: ['Web', 'Data'],
