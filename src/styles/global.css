@@ -22,8 +22,8 @@
 .project-visual.media-gallery .project-gallery-image{align-self:stretch;min-width:0;min-height:0;width:100%;height:100%;max-height:100%;object-fit:contain;object-position:top center;filter:none;border:1px solid color-mix(in srgb,var(--bg) 12%,transparent);border-radius:9px;background:var(--media-card);box-shadow:0 8px 24px var(--shadow-color)}
 .project-card:hover .project-visual.media-gallery .project-gallery-image{transform:none;filter:none}
 .project-visual.media-gallery .project-open{padding:4px 7px;border-radius:6px;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(8px)}
-.project-visual.media-terminal img{object-position:50% 42%;transform:scale(1.55);filter:none}
-.project-card:hover .project-visual.media-terminal img{transform:scale(1.62);filter:none}
+.project-visual.media-terminal img{object-position:left center;transform:scale(1.08);filter:none}
+.project-card:hover .project-visual.media-terminal img{transform:scale(1.12);filter:none}
 .project-visual.media-game img{object-position:center top}
 .home-hero{isolation:isolate}
 .hero-intro{position:relative;z-index:1}
@@ -46,6 +46,8 @@
 .detail-media .detail-image{width:100%;height:100%;min-height:530px;object-fit:cover;border:0;border-radius:0}
 .detail-media.media-phone{place-items:center;padding:22px;background:radial-gradient(circle at 50% 15%,color-mix(in srgb,var(--accent) 18%,transparent),transparent 52%),var(--bg-soft)}
 .detail-media.media-phone .detail-image{width:auto;height:486px;min-height:0;max-width:100%;object-fit:contain;border:1px solid color-mix(in srgb,var(--on-accent) 12%,transparent);border-radius:14px;box-shadow:0 20px 55px var(--shadow-color)}
+.detail-media.media-terminal{padding:22px;background:var(--bg-soft)}
+.detail-media.media-terminal .detail-image{min-height:0;height:100%;object-fit:contain;object-position:left center;background:var(--media-card)}
 .detail-media.media-gallery{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:12px;padding:14px;background:var(--media-surface)}
 .detail-gallery-image{width:100%;height:500px;object-fit:contain;object-position:top center;border:1px solid color-mix(in srgb,var(--bg) 12%,transparent);border-radius:9px;background:var(--media-card);box-shadow:0 8px 24px var(--shadow-color)}
 
