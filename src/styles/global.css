@@ -116,3 +116,11 @@ h1{line-height:1.06}
 .project-card:hover .project-visual>img{transform:none;filter:none}
 .reveal,.reveal.is-visible{opacity:1;transform:none}
 @media(max-width:720px){.project-visual.media-phone img{width:100%;height:100%;object-fit:contain;object-position:center;padding:6px}.primary-nav{visibility:visible}.primary-nav:not([data-open='true']) a{visibility:hidden}.primary-nav[data-open='true'] a{visibility:visible}}
+
+/* Final visual polish: keep the project-to-profile transition intentional and readable. */
+.projects-section{padding-bottom:clamp(24px,3.2vw,40px)}
+.about-section .section-heading{column-gap:clamp(24px,3vw,36px)}
+.about-copy,.journey-main p{hyphens:auto;text-wrap:pretty}
+.project-card.featured .project-visual.media-gallery{aspect-ratio:2.2/1}
+@media(min-width:721px){.about-copy,.journey-main p{text-align:justify}}
+@media(max-width:720px){.project-card.featured .project-visual.media-gallery{aspect-ratio:16/9}.about-copy,.journey-main p{text-align:left}}
