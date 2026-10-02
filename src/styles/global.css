@@ -102,3 +102,11 @@ h1{line-height:1.06}
 .form-status[data-state='error']{color:var(--coral)}
 .contact-submit:disabled{cursor:wait;opacity:.7;transform:none}
 @media(max-width:720px){.contact-panel.contact-panel-enhanced{grid-template-columns:1fr;gap:32px;padding:42px 0 48px}.contact-form{padding:22px}.contact-submit{width:100%}}
+
+/* Keep the page rhythm compact without changing the established visual system. */
+.section{padding:clamp(112px,9vw,132px) 0}
+.about-section{padding-block:clamp(86px,7vw,112px)}
+.journey-section{padding-top:clamp(58px,6vw,96px)}
+.contact-section{padding-top:clamp(52px,6vw,92px)}
+@media(max-width:960px){.section{padding:clamp(94px,9vw,108px) 0}}
+@media(max-width:720px){.section{padding:78px 0}}
