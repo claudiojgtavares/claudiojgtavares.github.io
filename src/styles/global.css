@@ -53,7 +53,7 @@
 .detail-media.media-gallery{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:12px;padding:14px;background:var(--media-surface)}
 .detail-gallery-image{width:100%;height:500px;object-fit:contain;object-position:top center;border:1px solid color-mix(in srgb,var(--bg) 12%,transparent);border-radius:9px;background:var(--media-card);box-shadow:0 8px 24px var(--shadow-color)}
 
-@media(max-width:720px){.project-link{min-width:0}.project-visual.media-phone{height:390px;aspect-ratio:auto}.project-visual.media-phone img{width:min(330px,calc(100% - 38px));height:auto;max-height:none}.project-visual.media-gallery{height:300px;padding:9px;gap:7px;aspect-ratio:auto}.detail-media{position:static;min-height:390px}.detail-media .detail-image{min-height:390px}.detail-media.media-phone .detail-image{height:350px;min-height:0}.detail-media.media-gallery{gap:7px;padding:9px}.detail-gallery-image{height:370px}}
+@media(max-width:720px){.project-link{min-width:0}.project-visual.media-phone{height:390px;aspect-ratio:auto}.project-visual.media-phone img{width:100%;height:100%;object-fit:cover;object-position:center top}.project-visual.media-gallery{height:300px;padding:9px;gap:7px;aspect-ratio:auto}.detail-media{position:static;min-height:390px}.detail-media .detail-image{min-height:390px}.detail-media.media-phone .detail-image{height:350px;min-height:0}.detail-media.media-gallery{gap:7px;padding:9px}.detail-gallery-image{height:370px}}
 
 /* Demo Day typography guardrails: keep section labels clear of large headings. */
 h1{line-height:1.06}
@@ -71,7 +71,7 @@ h1{line-height:1.06}
 /* Keep every project preview on one rhythm and show the complete ACTA capture. */
 .project-visual,.project-card:not(.featured) .project-visual{aspect-ratio:16/9}
 .project-visual.media-phone{height:auto;aspect-ratio:16/9;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);min-height:0;padding:14px}
-.project-visual.media-phone img{position:static;align-self:center;justify-self:center;width:auto;height:calc(100% - 28px);max-width:calc(100% - 28px);max-height:100%;margin:0;object-fit:contain;object-position:center;border-radius:10px;box-shadow:none}
+.project-visual.media-phone img{position:static;align-self:center;justify-self:center;width:100%;height:100%;max-width:none;max-height:none;margin:0;object-fit:cover;object-position:center top;border-radius:0;box-shadow:none}
 .project-visual.media-gallery{height:auto;aspect-ratio:16/9}
 
 /* Contact surface: direct email, social links and a mailto form for static hosting. */
