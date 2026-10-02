@@ -60,6 +60,10 @@ h1{line-height:1.06}
 .section-heading h2{line-height:1.06}
 .journey-section{padding-top:clamp(64px,8vw,120px)}
 .about-copy{max-width:65ch;margin:0;color:var(--muted);line-height:1.8}
+.certificates-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.certificate-card{padding:24px;border:1px solid var(--line);border-radius:17px;background:var(--surface)}
+.certificate-card h3{margin:0 0 8px;font-size:1.2rem}
+.certificate-card p{margin:0;color:var(--muted);font-size:.84rem}
 .contact-section{padding-top:clamp(64px,8vw,120px)}
 .contact-panel h2{line-height:1.06}
 
