@@ -32,7 +32,7 @@ const ogImageAlt = 'Cláudio Tavares — Desenvolvimento + TI, Cabo Verde';
     <a class="skip-link" href="#main-content">{isPt ? 'Saltar para o conteúdo' : 'Skip to content'}</a>
     <header class="site-header">
       <a class="brand" href={isPt ? '/' : '/en/'} aria-label={isPt ? 'Cláudio Tavares, início' : 'Cláudio Tavares, home'}><span class="brand-mark">CT</span><span>Cláudio <em>Tavares</em></span></a>
-      <nav class="primary-nav" aria-label={isPt ? 'Navegação principal' : 'Primary navigation'}>
+      <nav id="primary-nav" class="primary-nav" aria-label={isPt ? 'Navegação principal' : 'Primary navigation'}>
         <a href={isPt ? '/#projetos' : '/en/#projects'}>{isPt ? 'Projetos' : 'Projects'}</a><a href={isPt ? '/#percurso' : '/en/#journey'}>{isPt ? 'Percurso' : 'Journey'}</a><a href={isPt ? '/#contacto' : '/en/#contact'}>{isPt ? 'Contacto' : 'Contact'}</a>
       </nav>
       <div class="header-actions"><a class="lang-switch" href={alternate} aria-label={isPt ? 'Ver versão inglesa' : 'View Portuguese version'}>{isPt ? 'EN' : 'PT'}</a><button class="theme-toggle" type="button" data-theme-toggle data-light-label={isPt ? 'Mudar para tema escuro' : 'Switch to dark theme'} data-dark-label={isPt ? 'Mudar para tema claro' : 'Switch to light theme'} aria-label={isPt ? 'Mudar para tema claro' : 'Switch to light theme'} aria-pressed="false"><svg class="theme-icon sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg><svg class="theme-icon moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 15.4A8.4 8.4 0 0 1 8.6 3.4 8.4 8.4 0 1 0 20.6 15.4Z"></path></svg></button><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">{isPt ? 'Abrir menu' : 'Open menu'}</span><span></span><span></span></button></div>
@@ -44,12 +44,15 @@ const ogImageAlt = 'Cláudio Tavares — Desenvolvimento + TI, Cabo Verde';
       const themeButton = document.querySelector('[data-theme-toggle]');
       const menuButton = document.querySelector('[data-menu-toggle]');
       const nav = document.querySelector('.primary-nav');
-      const stored = localStorage.getItem('theme');
+      let stored = null;
+      try { stored = localStorage.getItem('theme'); } catch { stored = null; }
       if (stored === 'light' || stored === 'dark') root.dataset.theme = stored;
       const updateTheme = () => { const light = root.dataset.theme === 'light'; const label = light ? themeButton?.dataset.lightLabel : themeButton?.dataset.darkLabel; themeButton?.setAttribute('aria-label', label ?? (light ? 'Switch to dark theme' : 'Switch to light theme')); themeButton?.setAttribute('aria-pressed', String(light)); };
       updateTheme();
-      themeButton?.addEventListener('click', () => { root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light'; localStorage.setItem('theme', root.dataset.theme); updateTheme(); });
+      themeButton?.addEventListener('click', () => { root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light'; try { localStorage.setItem('theme', root.dataset.theme); } catch {} updateTheme(); });
+      const closeMenu = () => { menuButton?.setAttribute('aria-expanded', 'false'); nav?.setAttribute('data-open', 'false'); };
       menuButton?.addEventListener('click', () => { const open = menuButton.getAttribute('aria-expanded') === 'true'; menuButton.setAttribute('aria-expanded', String(!open)); nav?.setAttribute('data-open', String(!open)); });
+      document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
       nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => { menuButton?.setAttribute('aria-expanded', 'false'); nav?.setAttribute('data-open', 'false'); }));
     </script>
   </body>
