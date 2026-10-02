@@ -6,6 +6,7 @@ export type Project = {
   filters: string[];
   tags: { pt: string[]; en: string[] };
   image: string;
+  fullImage?: string;
   imageAlt?: { pt: string; en: string };
   media?: 'cover' | 'phone' | 'gallery' | 'terminal' | 'game';
   gallery?: { src: string; alt: { pt: string; en: string } }[];
@@ -41,7 +42,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'linux-seguranca-cloud', title: 'Linux, Segurança e Cloud', eyebrow: { pt: 'Sistemas · Laboratório em evolução', en: 'Systems · Evolving lab' }, category: 'Sistemas', filters: ['Systems'],
-    tags: { pt: ['Sistemas', 'Segurança'], en: ['Systems', 'Security'] }, image: '/images/linux-terminal.webp', imageAlt: { pt: 'Terminal Ubuntu numa máquina virtual com comandos de navegação, edição e informação do sistema', en: 'Ubuntu terminal in a virtual machine with navigation, editing and system-information commands' }, media: 'terminal', repo: 'https://github.com/claudiojgtavares/linux-seguranca-cloud', accent: '#3B82F6',
+    tags: { pt: ['Sistemas', 'Segurança'], en: ['Systems', 'Security'] }, image: '/images/linux-terminal-focused.webp', fullImage: '/images/linux-terminal.webp', imageAlt: { pt: 'Terminal Ubuntu numa máquina virtual com comandos de navegação, edição e informação do sistema', en: 'Ubuntu terminal in a virtual machine with navigation, editing and system-information commands' }, media: 'terminal', repo: 'https://github.com/claudiojgtavares/linux-seguranca-cloud', accent: '#3B82F6',
     pt: { summary: 'Laboratório documentado de Ubuntu Server numa VM: permissões (chmod), utilizadores, preparação para SSH e conceitos de cloud.', problem: 'Consolidar fundamentos operacionais em exercícios pequenos, verificáveis e sem expor dados reais.', solution: 'Notas, diagramas e evidências sanitizadas de uma VM local, com princípio do menor privilégio.', validation: 'Registo de aprendizagem prática; SSH remoto e cloud real ficam como próximos passos, não como experiência profissional alegada.', stack: ['Linux', 'Ubuntu Server', 'SSH', 'VMware', 'Segurança'] },
     en: { summary: 'Documented Ubuntu Server lab in a VM: permissions (chmod), users, SSH preparation and cloud concepts.', problem: 'Consolidate operational fundamentals through small, verifiable exercises without exposing real data.', solution: 'Notes, diagrams and sanitized evidence from a local VM with least-privilege thinking.', validation: 'A learning record; real remote SSH and cloud deployment remain future steps, not claimed professional experience.', stack: ['Linux', 'Ubuntu Server', 'SSH', 'VMware', 'Security'] }
   },
